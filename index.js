@@ -67,17 +67,16 @@ app.post("/", async (req, res) => {
   try {
     await googleSheetsInstance.spreadsheets.values.append({
       auth, //auth object
-      spreadsheetId: "asdf", //spreadsheet id
+      spreadsheetId, //spreadsheet id
       range: "A:C", //sheet name and range of cells
       valueInputOption: "USER_ENTERED", // The information will be passed according to what the usere passes in as date, number or text
       resource: {
         values: [[nombre, correo, titulo, fecharegistro]],
       },
     });
-
-    res.render("exito", { titulo: "My page" }).sendStatus(200);
+    res.status(200).render("exito", { titulo: "My page" });
   } catch (error) {
-    res.render("fallo", { titulo: "My page" }).sendStatus(500);
+    res.status(200).render("fallo", { titulo: "My page" }).status(500);
     console.error(error);
   }
 });
