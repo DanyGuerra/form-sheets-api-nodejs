@@ -36,12 +36,10 @@ app.post("/", async (req, res) => {
     timezone: "GMT-5",
   };
 
-  fecha.toLocaleDateString("default", options);
-
   let fecharegistro =
-    fecha.toLocaleDateString("default", options) +
+    fecha.toLocaleDateString("es-MX", options) +
     " " +
-    fecha.toLocaleTimeString("default");
+    fecha.toLocaleTimeString("es-MX");
 
   if (!nombre && !correo && !titulo) {
     res.sendStatus(400);
