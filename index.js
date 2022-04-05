@@ -29,11 +29,11 @@ app.post("/", async (req, res) => {
 
   let fecha = new Date();
   const options = {
-    weekday: "long",
+    weekday: "short",
     year: "numeric",
-    month: "long",
+    month: "short",
     day: "numeric",
-    timezone: "GMT-5",
+    timeZoneName: "short",
   };
 
   let fecharegistro =
