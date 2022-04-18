@@ -1,6 +1,6 @@
 const btnRegsitrar = document.getElementById("btn_registrar");
 const autoCompleteJS = new autoComplete({
-  placeHolder: "Buscar titulo...",
+  placeHolder: "TÍTULO",
   data: {
     src: [
       "Acupuntura Médica",
@@ -127,21 +127,3 @@ const autoCompleteJS = new autoComplete({
     },
   },
 });
-
-// btnRegsitrar.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   fetch("http://localhost:4000/", {
-//     method: "POST",
-//     body: JSON.stringify({
-//       nombre: "luis daniel",
-//       correo: "example@mail.com",
-//       titulo: "medico",
-//     }),
-//   })
-//     .then((response) => {
-//       console.log(response);
-//     })
-//     .catch(() => {
-//       console.log("error");
-//     });
-// });

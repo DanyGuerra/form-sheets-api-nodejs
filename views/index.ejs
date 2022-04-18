@@ -6,68 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro</title>
     <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
+    <link rel="stylesheet" href="./css/autocomplete.css">
+    <link rel="stylesheet" href="./css/index.css">
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css"
-    />
+
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Registro </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-        </div>
-      </div>
-    </nav>
-    <br /><br />
-    <div class="container">
-      <div class="card">
-        <div class="card-header">Registro</div>
-        <div class="card-body">
-          <form action="" method="post">
-            <div class="form-group">
-              <label for="formGroupExampleInput">Nombre</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nombre"
-                name="nombre"
-                placeholder="Juan Perez"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">Correo electrónico</label>
-              <input
-                type="email"
-                class="form-control"
-                id="correo"
-                name="correo"
-                placeholder="juanperez@example.com"
-                required
-              />
-              <label for="formGroupExampleInput2">Titulo</label>
-
-              <input id="autoComplete" id="titulo" name="titulo" required />
-            </div>
-            <br />
-            <button
-              type="submit"
-              class="btn btn-primary btn-sm"
-              id="btn_registrar"
-            >
-              Registrar
-            </button>
-          </form>
-        </div>
-      </div>
+    <header>
+      <img src="./assets/reforce-logo.png" alt="Logo">
+    </header>
+    <div class="circle">
     </div>
-    <script src="./js/form.js"></script>
-  </body>
+
+    <main>
+      <section class="main-section">
+
+        <div class="left-message">
+          <h1><b>EBOOK:</b> FACTOR DE TRANSFERENCIA</h1>
+          <h2>Usos médicos</h2>
+          <p>Registrate para descargar un exclusivo Ebook sobre los usos médicos del factor de transferencia en infecciones virales cáncer, infecciones recurrentes y alérgias.</p>
+        </div>
+        <div class="formulario">
+
+          <form action="" method="post">
+            <input
+            type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="NOMBRE"
+                    required
+                    />
+                  <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="CORREO ELECTRONICO"
+                    required
+                  />
+
+                  <input id="autoComplete" id="titulo" name="titulo" required placeholder="TÍTULO"/>
+
+                  <button
+                  type="submit"
+                  id="btn_registrar"
+                  >
+                  DESCARGAR
+                </button>
+              </form>
+            </div>
+            </section>
+        </main>
+        <footer>
+          <div class="banner"></div>
+          <div class="aviso-privacidad">
+            <a href="https://www.reforcepharma.com/politica-de-privacidad">
+            AVISO DE PRIVACIDAD</a>
+          </div>
+          </footer>
+        </div>
+        <script src="./js/form.js"></script>
+      </body>
 </html>
