@@ -74,7 +74,7 @@ app.post("/", async (req, res) => {
       },
     });
 
-    res.redirect("/download");
+    res.render("exito");
   } catch (error) {
     res.status(500).render("fallo", { titulo: "My page" });
     console.error(error);
@@ -82,8 +82,8 @@ app.post("/", async (req, res) => {
 });
 
 app.get("/download", async (req, res) => {
-  req.header("User-Agent");
-  res.render("exito").attachment("./public/assets/IPP_Celestin_FT.pdf");
+  console.log("downloading");
+  res.download("./public/assets/IPP_Celestin_FT.pdf");
 });
 
 const port = process.env.PORT || 5000;
