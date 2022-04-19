@@ -73,6 +73,7 @@ app.post("/", async (req, res) => {
         values: [[nombre, correo, titulo, fecharegistro]],
       },
     });
+    res.render("exito", { titulo: "My page" });
     res.redirect("/download");
   } catch (error) {
     res.status(500).render("fallo", { titulo: "My page" });
@@ -82,7 +83,6 @@ app.post("/", async (req, res) => {
 
 app.get("/download", async (req, res) => {
   req.header("User-Agent");
-  res.render("exito", { titulo: "My page" });
   res.attachment("./public/assets/IPP_Celestin_FT.pdf");
 });
 
