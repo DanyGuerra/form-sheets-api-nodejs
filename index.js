@@ -83,8 +83,7 @@ app.post("/", async (req, res) => {
 
 app.get("/download", async (req, res) => {
   req.header("User-Agent");
-  res.render("exito", { titulo: "My page" });
-  res.attachment("./public/assets/IPP_Celestin_FT.pdf");
+  res.render("exito").attachment("./public/assets/IPP_Celestin_FT.pdf");
 });
 
 const port = process.env.PORT || 5000;

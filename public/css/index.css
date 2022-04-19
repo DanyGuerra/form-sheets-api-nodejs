@@ -45,6 +45,7 @@ main {
   width: 70%;
   display: flex;
   flex-direction: column;
+  margin: 50px 0;
 }
 
 .main-section-success {
@@ -225,6 +226,7 @@ footer .aviso-privacidad {
     background-image: url(../assets/banner-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
+    margin-bottom: 35px;
   }
 
   .main-section-success button {
