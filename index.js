@@ -74,8 +74,7 @@ app.post("/", async (req, res) => {
       },
     });
 
-    res.download("./public/assets/IPP_Celestin_FT.pdf");
-    // res.render("exito");
+    res.render("exito");
   } catch (error) {
     res.status(500).render("fallo", { titulo: "My page" });
     console.error(error);
