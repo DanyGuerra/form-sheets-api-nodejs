@@ -161,7 +161,12 @@ footer {
   justify-content: center;
 }
 
-footer .banner {
+footer a {
+  width: 100%;
+  height: auto;
+}
+
+.banner {
   width: 100%;
   height: 185px;
   background-image: url(../assets/banner-mobile.png);
@@ -221,7 +226,7 @@ footer .aviso-privacidad {
     width: 45%;
   }
 
-  footer .banner {
+  .banner {
     width: 100%;
     background-image: url(../assets/banner-desktop.png);
     background-repeat: no-repeat;
@@ -235,14 +240,14 @@ footer .aviso-privacidad {
 }
 
 @media (min-width: 992px) {
-  footer .banner {
+  .banner {
     width: 100%;
     height: 256px;
   }
 }
 
 @media (min-width: 1280px) {
-  footer .banner {
+  .banner {
     background-size: cover;
   }
 }
