@@ -27,10 +27,6 @@ app.post("/", async (req, res) => {
   const correo = req.body.correo;
   const titulo = req.body.titulo;
 
-  if (!nombre || !correo || !titulo) {
-    return;
-  }
-
   let fecha = new Date();
   const options = {
     weekday: "short",
