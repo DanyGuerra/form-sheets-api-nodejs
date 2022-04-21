@@ -41,7 +41,7 @@ app.post("/", async (req, res) => {
     " " +
     fecha.toLocaleTimeString("es-MX");
 
-  if (!nombre && !correo && !titulo) {
+  if (!nombre || !correo || !titulo) {
     res.sendStatus(400);
   }
 
