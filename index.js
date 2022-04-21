@@ -42,7 +42,7 @@ app.post("/", async (req, res) => {
     fecha.toLocaleTimeString("es-MX");
 
   if (!nombre || !correo || !titulo) {
-    res.sendStatus(400);
+    return res.sendStatus(400);
   }
 
   const auth = new google.auth.GoogleAuth({
