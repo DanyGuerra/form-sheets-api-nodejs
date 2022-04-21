@@ -8,8 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js"></script>
     <link rel="stylesheet" href="./css/autocomplete.css">
     <link rel="stylesheet" href="./css/index.css">
-
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <header>
@@ -28,7 +27,7 @@
         </div>
         <div class="formulario">
 
-          <form action="" method="post">
+          <form action="" method="post" id="form">
             <input
             type="text"
                     id="nombre"
@@ -49,6 +48,10 @@
                   <button
                   type="submit"
                   id="btn_registrar"
+                  class="g-recaptcha"
+                  data-sitekey="6LcTlY8fAAAAAM_KSzCWE8idAfId77O--gMYAkLO"
+                  data-callback='onSubmit'
+                  data-action='submit'
                   >
                   DESCARGAR
                 </button>

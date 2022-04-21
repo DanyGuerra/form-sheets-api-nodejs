@@ -127,3 +127,7 @@ const autoCompleteJS = new autoComplete({
     },
   },
 });
+
+function onSubmit(token) {
+  document.getElementById("form").submit();
+}
