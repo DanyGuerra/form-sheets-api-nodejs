@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 
 app.post("/", async (req, res) => {
   const nombre = req.body.nombre;
-  const correo = req.body.correo;
+  const correo = req.body.telefono;
   const titulo = req.body.titulo;
 
   let fecha = new Date();
