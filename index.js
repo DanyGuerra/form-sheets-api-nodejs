@@ -82,7 +82,7 @@ app.post("/", async (req, res) => {
 });
 
 app.get("/download", async (req, res) => {
-  res.download("./public/assets/IPP_Celestin_FT.pdf");
+  res.download("./public/assets/IPP_Celestin_ReforcePharma");
 });
 
 const port = process.env.PORT || 5000;

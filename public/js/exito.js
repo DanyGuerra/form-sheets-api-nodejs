@@ -4,7 +4,7 @@ window.addEventListener("load", async function () {
     const data = await res.blob();
     var a = document.createElement("a");
     a.href = window.URL.createObjectURL(data);
-    a.download = "IPP_Celestin_FT";
+    a.download = "IPP_Celestin_ReforcePharma";
     a.click();
   } catch (error) {
     console.error(error);
