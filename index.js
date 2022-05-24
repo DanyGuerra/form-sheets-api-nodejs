@@ -27,6 +27,12 @@ app.post("/", async (req, res) => {
   const correo = req.body.telefono;
   const titulo = req.body.titulo;
 
+  function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+      email
+    );
+  }
+
   let fecha = new Date();
   const options = {
     weekday: "short",
@@ -43,6 +49,10 @@ app.post("/", async (req, res) => {
 
   if (!nombre || !correo || !titulo) {
     return res.sendStatus(400);
+  }
+
+  if (!isEmail(correo)) {
+    return res.send("Correo NO válido");
   }
 
   const auth = new google.auth.GoogleAuth({
